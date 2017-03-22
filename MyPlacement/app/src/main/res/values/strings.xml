@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Placement</string>
+    <string name="facebook_app_id">1671923559777640</string>
+    <string name="facebook_login_protocol_scheme">fb1671923559777640</string>
+    <string name="twitter_consumer_key">pxxKtUAXzmSXjLbxdnZ700RnT</string>
+    <string name="twitter_consumer_secret">sJUYatm5ZtkefpOTBDOwUUKntahTa1K6dFvVRHWMjlkDCrAOJC</string>
+</resources>
