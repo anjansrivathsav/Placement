@@ -22,7 +22,7 @@ public class SigninActivity extends AppCompatActivity {
     private EditText ed2;
     private Button btn1;
     private Button btn2;
-
+    private Button btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class SigninActivity extends AppCompatActivity {
         ed2=(EditText)findViewById(R.id.ed2);
         btn1=(Button) findViewById(R.id.btn1);
         btn2=(Button)findViewById(R.id.btn2);
+        btn3=(Button) findViewById(R.id.btn3);
         //ImageView iv=(ImageView)findViewById(R.id.img);
 
         mAuth=FirebaseAuth.getInstance();
@@ -42,7 +43,7 @@ public class SigninActivity extends AppCompatActivity {
                 if (user != null) {
                     // User is signed in
                     //Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    startActivity(new Intent(SigninActivity.this,ResultActivity.class));
+                    startActivity(new Intent(SigninActivity.this,AdminActivity.class));
                 } else {
                     // User is signed out
                     //Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -63,9 +64,15 @@ public class SigninActivity extends AppCompatActivity {
                 startsignin();
             }
         });
+     btn3.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             //startActivity(new Intent(SigninActivity.this,ChangePasswordActivity.class));
+               startActivity(new Intent(SigninActivity.this,ResetPasswordActivity.class));
+         }
+     });
 
 
-        // ...
     }
 
     @Override
@@ -97,5 +104,6 @@ public class SigninActivity extends AppCompatActivity {
                     }
                 });
     }
+
 
     }

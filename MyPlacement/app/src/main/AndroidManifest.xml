@@ -28,7 +28,9 @@
             android:name="io.fabric.ApiKey"
             android:value="b5c0a8df7f393c9c2d83d031b1cf99c1e074a37e" />
 
-        <activity android:name=".AdminActivity"></activity>
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".ResetPasswordActivity"></activity>
     </application>
 
 </manifest>
