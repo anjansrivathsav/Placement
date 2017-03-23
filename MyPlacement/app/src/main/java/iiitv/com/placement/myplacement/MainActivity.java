@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 // with your app's user model
                 String msg = "@" + session.getUserName() + " logged in! (#" + session.getUserId() + ")";
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
-              startActivity(new Intent(MainActivity.this,ResultActivity.class));
+              startActivity(new Intent(MainActivity.this,AdminActivity.class));
             }
             @Override
             public void failure(TwitterException exception) {
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    startActivity(new Intent(MainActivity.this, ResultActivity.class));
+                    startActivity(new Intent(MainActivity.this, AdminActivity.class));
                     finish();
 
                 } else {
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
                 mAuth.addAuthStateListener(mAuthListener);
                 Toast.makeText(MainActivity.this,"authenticated",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, ResultActivity.class));
+                startActivity(new Intent(MainActivity.this, AdminActivity.class));
             }
 
             @Override

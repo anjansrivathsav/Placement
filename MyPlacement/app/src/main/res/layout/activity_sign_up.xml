@@ -1,44 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF35CC9C"
-    tools:context="iiitv.com.placement.myplacement.SignUpActivity">
+    android:focusable="true"
+    android:fitsSystemWindows="true"
+    tools:context="ui.SignUpActivity">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn1"
-        android:text="signup"
-        android:background="#FFBECC20"
-        android:layout_marginTop="62dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp"
-        android:layout_below="@+id/ed2"
-        android:layout_alignLeft="@+id/ed2"
-        android:layout_alignStart="@+id/ed2" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="true"
+        android:background="#FFF17B20"
+        android:gravity="center"
+        android:nextFocusDown="@+id/imageView"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:focusable="true"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:hint="Email..."
-        android:id="@+id/ed1"
-        android:background="@drawable/inandout"
-        android:layout_marginBottom="32dp"
-        android:layout_above="@+id/ed2"
-        android:layout_centerHorizontal="true" />
+            <EditText
+                android:id="@+id/ed1"
+                android:layout_width="match_parent"
+                android:focusable="true"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Email..."
+                android:inputType="textEmailAddress"
+                android:contentDescription="Enter Email...."
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:focusable="true"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:hint="Password..."
-        android:id="@+id/ed2"
-        android:background="@drawable/inandout"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/ed1"
-        android:layout_alignStart="@+id/ed1" />
+            <EditText
+                android:id="@+id/ed2"
+                android:layout_width="match_parent"
+                android:focusable="true"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Password..."
+                android:inputType="textPassword"
+                android:contentDescription="Enter password"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:focusable="true"
+            android:layout_height="wrap_content">
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFEDDF15"
+                android:id="@+id/btn1"
+                android:text="signup"
 
-</RelativeLayout>
+                />
+        </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
